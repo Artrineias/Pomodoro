@@ -1,0 +1,74 @@
+body{
+    background-color: rgb(40, 40, 40);
+}
+
+body > section > .box-primaria{
+    position: relative;
+    top: 50px;
+    margin: auto;
+    background-color: rgb(60, 60, 60);
+    height: 500px;
+    width: 500px;
+    border-radius: 20%;
+}
+body > section > .box-primaria > .box-segundaria{
+    position: relative;
+    top: 70px;
+    margin: auto;
+    background-color: rgb(70, 70, 70);;
+    height: 350px;
+    width: 350px;
+    border-radius: 100%;
+
+}
+body > section > .box-primaria > .box-segundaria > .box{
+    background-color: rgb(60, 60, 60);
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 30px;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+    border-radius: 100%;
+    border: 10px;
+    border-color: rgb(80, 80, 80);
+    border-style: solid;
+}
+body > section > .box-primaria > .box-segundaria > .box > #saida{
+    position: relative;
+    left: 20%;
+    top: 40%;
+}
+
+section > .box-primaria > .stop{
+    position: relative;
+    left: 25px;
+    border: 0px;
+}
+section > .box-primaria > .reset{
+    position: relative;
+    left: 213px;
+    border: 0px;
+}
+section > .box-primaria > .play{
+    position: relative;
+    left: 180px;
+    border: 0px;
+
+}
+button{
+    position: relative;
+    top: 75px;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 100%;
+
+    font-size: 24px;
+    
+    background-color: rgba(50, 50, 50, 1);
+    color: aliceblue;
+
+}
