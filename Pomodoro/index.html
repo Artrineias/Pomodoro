@@ -7,14 +7,8 @@
     <meta name="description">
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="./CSS/index_body.css">
-    <link rel="stylesheet" href="./CSS/header/index_header.css">
-    <link rel="stylesheet" href="./CSS/main/index_historico.css">
-    <link rel="stylesheet" href="./CSS/main/index_timer.css">
-    <link rel="stylesheet" href="./CSS/main/index_tarefa.css">
-    <link rel="stylesheet" href="./CSS/main/index_descanço.css">
-    <link rel="stylesheet" href="./CSS/Footer/index_footer.css">
-    <link rel="stylesheet" href="./CSS/main/index_main.css">
-    <script src="./JS/index.js"></script>
+    <script src="./JS/timer.js"></script>
+    <script src="./JS/display.js"></script>
     <title>Portifolio</title>
 </head>
 <body>
@@ -25,36 +19,20 @@
             <a href="#">Sobre</a>
         </nav>
     </header>
-    
     <main>
-        <div class="timer">
             <section class="display">
-                <div id="cronometro">
-                    <div id="saida">00:00:00</div>
+                <div id="cronometro" class="cronometro">
+                    <div id="hora" class="input">00</div>:
+                    <div id="minuto" class="input">00</div>:
+                    <div id="segundo" class="input">00</div>
                 </div>
                 <div class="botões">
-                    <button class="play" onclick="inicio()">Play</button>
-                    <button class="stop" onclick="para()">Stop</button>
-                    <button class="reset" onclick="resetar()">Reset</button>
+                    <button id="play" onclick="iniciar()">Play</button>
+                    <button id="stop" onclick="para()">Stop</button>
+                    <button id="reset" onclick="resetar()">Reset</button>
                 </div>
             </section>
 
-            <section class="seletor-produção">
-                <h2>Pomodoro: </h2>
-                <input type="number" id="hora" placeholder="Horas" value="00">
-                <input type="number" id="minuto" placeholder="Minutos" value="25">
-                <input type="number" id="segundos" placeholder="Segundos" value="00">
-            </section>
-
-            <section class="seletor-descanço">
-                <h2>Long Break:</h2>
-                <input type="number" id="hora_long" placeholder="Horas" value="00">
-                <input type="number" id="minuto_long" placeholder="Minutos" value="15">
-                <input type="number" id="segundos_long" placeholder="Segundos" value="00">
-            </section>
-        </div>
-        <div class="historico" id="historico">
-        </div>
     </main>
     
     <footer>

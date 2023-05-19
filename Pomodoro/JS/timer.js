@@ -1,28 +1,15 @@
-"use strcit"
-i= 0
-h=0
-m=25
-s=0
-dh=0
-dm=25
-ds = 0
-
-function inicio(){
-    if(h==dh &&m==dm&&s==ds){
-        x = 0
+hora = document.getElementsById("hora")
+minuto = document.getElementsById("minuto")
+segundo = document.getElementsById("segundo")
+function iniciar(){  
+    h=0
+    m=25
+    s=0
+    timer = setInterval( () => { tempo() },1000 )
     }
-    if(x==0){
-        timer = setInterval( () => { tempo() },10 )
-        x++
-    }else{
-        clearInterval(timer)
-        x--   
-    }
-}
 
 function para(){
     clearInterval(timer)
-    x--
 }
 
 function resetar(){
@@ -30,7 +17,9 @@ function resetar(){
     h=0
     m=0
     s=0
-    document.getElementById("saida").innerHTML = "00:00:00"
+    hora.innerHTML = (h < 10 ? '0' + h : h)
+    minuto.innerHTML = (m < 10 ? '0' + m : m)
+    segundo.innerHTML = ( s < 10 ? '0' + s : s)   
 }
 
 function minutos(){
@@ -66,13 +55,8 @@ function tempo(){
     else{
         clearInterval(timer)
     }
-
-
-
-    showtimer= (h < 10 ? '0' + h : h) + ":"+ (m < 10 ? '0' + m : m) + ":" + ( s < 10 ? '0' + s : s)
-
-    document.getElementById("saida").innerHTML = showtimer
-    
-    return showtimer
+    hora.innerHTML = (h < 10 ? '0' + h : h)
+    minuto.innerHTML = (m < 10 ? '0' + m : m)
+    segundo.innerHTML = ( s < 10 ? '0' + s : s)   
 }
 
